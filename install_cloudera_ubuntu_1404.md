@@ -27,14 +27,14 @@ If you see `1`, ipv6 has been successfully disabled.
 Edit `/etc/hostname` with following content
 
 ```
-master.zhqiang.org
+abc.xyz.com
 ```
 
 Edit `/ect/hosts` with the following content
 
 ```
 127.0.0.1       localhost.localdomain   localhost
-xxx.xxx.xxx.xxx master.zhqiang.org      master
+xxx.xxx.xxx.xxx abc.xyz.com             abc
 ```
 
 Activate the new hostname
@@ -47,8 +47,8 @@ Verify it
 
 ```
 hostname
-ping master
-ping master.zhqiang.org
+ping abc
+ping abc.xyz.com
 ```
 
 You also need to change reversed DNS in (https://panel.cloudatcost.com/index.php)
@@ -73,8 +73,8 @@ chmod u+x cloudera-manager-installer.bin
 Wait couples of minutes for the server to starting up and verify the status
 ```
 netstat | grep 7180
-telnet master.zhqiang.org 7180
-python -c 'import socket; import sys; s = socket.socket(socket.AF_INET); s.settimeout(5.0); s.connect((sys.argv[1], int(sys.argv[2]))); s.close();' master.zhqiang.org 7182
+telnet abc.xyz.com 7180
+python -c 'import socket; import sys; s = socket.socket(socket.AF_INET); s.settimeout(5.0); s.connect((sys.argv[1], int(sys.argv[2]))); s.close();' abc.xyz.com 7182
 ```
 
 # Enhance
