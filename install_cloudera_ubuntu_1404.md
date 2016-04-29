@@ -11,7 +11,7 @@ net.ipv6.conf.lo.disable_ipv6 = 1
 Activate it
 
 ```
-sudo sysctl -p
+sysctl -p
 ```
 
 To verify the result
@@ -30,7 +30,7 @@ Edit `/etc/hostname` with following content
 abc.xyz.com
 ```
 
-Edit `/ect/hosts` with the following content
+Edit `/etc/hosts` with the following content
 
 ```
 127.0.0.1       localhost.localdomain   localhost
@@ -59,7 +59,7 @@ If it gives you something different than your expected, something is wrong.
 # Install NTP service
 
 ```
-sudo apt-get install ntp
+apt-get install ntp
 ```
 
 # Install Cloudera Manager
