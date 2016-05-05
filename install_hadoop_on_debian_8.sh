@@ -3,7 +3,7 @@ then
 	echo 'type: datanode'
 	type=datanode
 else
-	if ["$1" = namenode]
+	if [ "$1" = namenode ]
 	then
 		echo 'type: namenode'
 		type=namenode
@@ -36,7 +36,7 @@ cp -f conf/yarn-site.xml $HADOOP_CONF_DIR/yarn-site.xml
 cp -f conf/mapred-site.xml $HADOOP_CONF_DIR/mapred-site.xml
 cp -f conf/hosts /etc/hosts
 # only required for namenode
-if ["$type" = namenode]
+if [ "$type" = namenode ]
 then
 	cp -f conf/slaves $HADOOP_CONF_DIR/slaves
 	cp -f conf/masters $HADOOP_CONF_DIR/masters
