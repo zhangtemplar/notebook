@@ -21,6 +21,9 @@ wget http://www.carfab.com/apachesoftware/hadoop/common/hadoop-2.7.2/hadoop-2.7.
 tar xvf hadoop-* -C /usr/local
 mv /usr/local/hadoop-* /usr/local/hadoop
 
+echo 'obtain conf.tar'
+scp root@45.62.236.40:/root/conf.tar .
+
 echo 'configure hadoop'
 # apt-get install vim
 tar -xf conf.tar
@@ -52,3 +55,4 @@ echo 'change permission of hadoop home user'
 chown -R zhangtemplar $HADOOP_HOME
 
 echo 'one more thing: please change your hostname according to'
+cat /etc/hosts
